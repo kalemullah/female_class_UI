@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 
 void main() {
   runApp(const MyApp());
@@ -105,37 +106,37 @@ class _Screen2State extends State<Screen2> {
                 Container(
                   height: 100,
                   width: 100,
-                  color: Colors.black12,
+                  color: Colors.green,
                 ),
                 Container(
                   height: 100,
                   width: 100,
-                  color: Colors.black12,
+                  color: Colors.green,
                 ),
                 Container(
                   height: 100,
                   width: 100,
-                  color: Colors.black12,
+                  color: Colors.green,
                 ),
                 Container(
                   height: 100,
                   width: 100,
-                  color: Colors.black12,
+                  color: Colors.green,
                 ),
                 Container(
                   height: 100,
                   width: 100,
-                  color: Colors.blueAccent,
+                  color: Colors.green,
                 ),
                 Container(
                   height: 100,
                   width: 100,
-                  color: Colors.black12,
+                  color: Colors.green,
                 ),
                 Container(
                   height: 100,
                   width: 100,
-                  color: Colors.black12,
+                  color: Colors.green,
                 ),
               ],
             ),
@@ -151,14 +152,17 @@ class _Screen2State extends State<Screen2> {
             Column(
               children: [
                 Container(
-                  height: 100,
-                  width: 100,
-                  color: Colors.red,
-                ),
+                    decoration: const BoxDecoration(
+                      color: Colors.red,
+                      borderRadius: BorderRadius.only(
+                          topLeft: Radius.circular(10),
+                          topRight: Radius.circular(10)),
+                    ),
+                    height: 100,
+                    width: 100,
+                    child: Center(child: const Text('this is test'))),
               ],
             ),
-        
-        
           ],
         ));
   }
