@@ -4,6 +4,9 @@ import 'package:testing1/task1.dart';
 import 'package:testing1/task2.dart';
 import 'package:testing1/task3.dart';
 import 'package:testing1/task4.dart';
+import 'package:testing1/task5.dart';
+import 'package:testing1/task6.dart';
+import 'package:testing1/task7.dart';
 
 void main() {
   runApp(const MyApp());
@@ -20,7 +23,10 @@ class MyApp extends StatelessWidget {
           colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
           useMaterial3: true,
         ),
-        home: Task4()
+        home: Task7()
+        //Task6()
+        //Task5()
+        //Task4()
         //Task3(),
         // const Screen2(),
         );
