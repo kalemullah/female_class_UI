@@ -1,12 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:testing1/task1.dart';
+import 'package:testing1/task10.dart';
+import 'package:testing1/task11.dart';
 import 'package:testing1/task2.dart';
 import 'package:testing1/task3.dart';
 import 'package:testing1/task4.dart';
 import 'package:testing1/task5.dart';
 import 'package:testing1/task6.dart';
 import 'package:testing1/task7.dart';
+import 'package:testing1/task8.dart';
+import 'package:testing1/task9.dart';
 
 void main() {
   runApp(const MyApp());
@@ -23,7 +27,9 @@ class MyApp extends StatelessWidget {
           colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
           useMaterial3: true,
         ),
-        home: Task7()
+        home: Task11()
+        //Task10()
+        //VideoScreen()
         //Task6()
         //Task5()
         //Task4()

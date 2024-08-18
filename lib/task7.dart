@@ -7,7 +7,11 @@ class Task7 extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        leading: Icon(Icons.menu),
+        leading: GestureDetector(
+            onTap: () {
+              Navigator.pop(context);
+            },
+            child: Icon(Icons.menu)),
         actions: [
           Icon(Icons.search),
           SizedBox(
@@ -123,12 +127,133 @@ class Task7 extends StatelessWidget {
                     width: 20,
                   ),
                   Image.asset(
-                    'assets/image.jpeg',
-                    width: 150,
+                    'assets/shoes1.png',
+                    width: 170,
                   )
                 ],
               ),
             ),
+            SizedBox(
+              height: 20,
+            ),
+            Text(
+              '#Trending',
+              style: TextStyle(color: Colors.blueAccent, fontSize: 17),
+            ),
+            Text(
+              'Products',
+              style: TextStyle(
+                  color: Colors.blueAccent,
+                  fontSize: 20,
+                  fontWeight: FontWeight.bold),
+            ),
+            SizedBox(
+              height: 30,
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Container(
+                        height: 220,
+                        width: 170,
+                        decoration: BoxDecoration(
+                            color: Colors.blue.withOpacity(.6),
+                            borderRadius:
+                                BorderRadius.all(Radius.circular(20))),
+                        child: Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: Column(
+                            // crossAxisAlignment: CrossAxisAlignment.end,
+                            children: [
+                              Align(
+                                alignment: Alignment.bottomRight,
+                                child: Container(
+                                  height: 30,
+                                  width: 30,
+                                  decoration: BoxDecoration(
+                                    borderRadius:
+                                        BorderRadius.all(Radius.circular(5)),
+                                    color: Colors.blue,
+                                  ),
+                                  child:
+                                      Icon(Icons.favorite, color: Colors.white),
+                                ),
+                              ),
+                              Image.asset(
+                                'assets/shoes1.png',
+                              ),
+                            ],
+                          ),
+                        )),
+                    SizedBox(
+                      height: 10,
+                    ),
+                    Text(
+                      '#strap',
+                      style: TextStyle(fontSize: 16),
+                    ),
+                    Text(
+                      'Navy SHoes',
+                      style: TextStyle(
+                          fontSize: 16,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.blueAccent),
+                    ),
+                  ],
+                ),
+                Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Container(
+                        height: 220,
+                        width: 170,
+                        decoration: BoxDecoration(
+                            color: Colors.blue.withOpacity(.6),
+                            borderRadius:
+                                BorderRadius.all(Radius.circular(20))),
+                        child: Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.end,
+                            children: [
+                              Container(
+                                height: 30,
+                                width: 30,
+                                decoration: BoxDecoration(
+                                  borderRadius:
+                                      BorderRadius.all(Radius.circular(5)),
+                                  color: Colors.blue,
+                                ),
+                                child:
+                                    Icon(Icons.favorite, color: Colors.white),
+                              ),
+                              Image.asset(
+                                'assets/shoes1.png',
+                              ),
+                            ],
+                          ),
+                        )),
+                    SizedBox(
+                      height: 10,
+                    ),
+                    Text(
+                      '#strap',
+                      style: TextStyle(fontSize: 16),
+                    ),
+                    Text(
+                      'Navy SHoes',
+                      style: TextStyle(
+                          fontSize: 16,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.blueAccent),
+                    ),
+                  ],
+                ),
+              ],
+            )
           ],
         ),
       ),
