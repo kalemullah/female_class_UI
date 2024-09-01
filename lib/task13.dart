@@ -1,7 +1,21 @@
 import 'package:flutter/material.dart';
+import 'package:testing1/task14.dart';
 
-class Shopping extends StatelessWidget {
+class Shopping extends StatefulWidget {
   const Shopping({super.key});
+
+  @override
+  State<Shopping> createState() => _ShoppingState();
+}
+
+class _ShoppingState extends State<Shopping> {
+  List<String> Images = [
+    'assets/black_shirt.png',
+    'assets/grey_shirt.jpeg',
+    'assets/amber-shirt.webp',
+    'assets/ambershirt.jpg'
+  ];
+  List<String> price = ['\$ 230', '\$ 250', '\$ 270', '\$ 290'];
 
   @override
   Widget build(BuildContext context) {
@@ -39,6 +53,7 @@ class Shopping extends StatelessWidget {
             ),
             Expanded(
               child: GridView.builder(
+                  itemCount: price.length,
                   gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                     mainAxisSpacing: 5,
                     crossAxisSpacing: 5,
@@ -84,29 +99,40 @@ class Shopping extends StatelessWidget {
                                 ),
                                 SizedBox(height: 10),
                                 Image.asset(
-                                  'assets/images.jpeg',
+                                  Images[index],
                                   height: 130,
                                   width: 130,
                                   fit: BoxFit.cover,
                                 ),
                                 SizedBox(height: 10),
                                 Text('T-shirts'),
-                                Text('\$ 230'),
+                                Text(price[index]),
                               ],
                             ),
                           ),
                           SizedBox(height: 10),
-                          Container(
-                            height: 30,
-                            width: 100,
-                            decoration: BoxDecoration(
-                              color: Colors.red,
-                              borderRadius: BorderRadius.circular(10),
-                            ),
-                            child: Center(
-                              child: Text(
-                                'Buy Now',
-                                style: TextStyle(color: Colors.white),
+                          GestureDetector(
+                            onTap: () {
+                              Navigator.push(context,
+                                  MaterialPageRoute(builder: (context) {
+                                return DetailsScreen(
+                                  image: Images[index],
+                                  price: price[index],
+                                );
+                              }));
+                            },
+                            child: Container(
+                              height: 30,
+                              width: 100,
+                              decoration: BoxDecoration(
+                                color: Colors.red,
+                                borderRadius: BorderRadius.circular(10),
+                              ),
+                              child: Center(
+                                child: Text(
+                                  'Buy Now',
+                                  style: TextStyle(color: Colors.white),
+                                ),
                               ),
                             ),
                           )
