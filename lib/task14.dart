@@ -1,16 +1,24 @@
 import 'package:flutter/material.dart';
 
 class DetailsScreen extends StatefulWidget {
-  const DetailsScreen({super.key, this.image, this.price});
+  const DetailsScreen({super.key, required this.image, this.name, this.price});
 
   final image;
   final price;
+  final name;
 
   @override
   State<DetailsScreen> createState() => _DetailsScreenState();
 }
 
 class _DetailsScreenState extends State<DetailsScreen> {
+  int selectedsize = -1;
+  void changesize(int tempsized) {
+    setState(() {
+      selectedsize = tempsized;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -90,61 +98,89 @@ class _DetailsScreenState extends State<DetailsScreen> {
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Container(
-                    height: 35,
-                    width: 35,
-                    decoration: BoxDecoration(
-                        color: Colors.white,
-                        shape: BoxShape.circle,
-                        boxShadow: [
-                          BoxShadow(
-                              color: Colors.grey,
-                              blurRadius: 1,
-                              spreadRadius: 1.5)
-                        ]),
-                    child: Center(child: Text('42'))),
+                GestureDetector(
+                  onTap: () {
+                    changesize(1);
+                  },
+                  child: Container(
+                      height: 35,
+                      width: 35,
+                      decoration: BoxDecoration(
+                          color: Colors.white,
+                          shape: BoxShape.circle,
+                          boxShadow: [
+                            BoxShadow(
+                                color: selectedsize == 1
+                                    ? Colors.red
+                                    : Colors.grey,
+                                blurRadius: 1,
+                                spreadRadius: 1.5)
+                          ]),
+                      child: Center(child: Text('42'))),
+                ),
                 SizedBox(width: 15),
-                Container(
-                    height: 35,
-                    width: 35,
-                    decoration: BoxDecoration(
-                        color: Colors.white,
-                        shape: BoxShape.circle,
-                        boxShadow: [
-                          BoxShadow(
-                              color: Colors.grey,
-                              blurRadius: 1,
-                              spreadRadius: 1.5)
-                        ]),
-                    child: Center(child: Text('43'))),
+                GestureDetector(
+                  onTap: () {
+                    changesize(2);
+                  },
+                  child: Container(
+                      height: 35,
+                      width: 35,
+                      decoration: BoxDecoration(
+                          color: Colors.white,
+                          shape: BoxShape.circle,
+                          boxShadow: [
+                            BoxShadow(
+                                color: selectedsize == 2
+                                    ? Colors.red
+                                    : Colors.grey,
+                                blurRadius: 1,
+                                spreadRadius: 1.5)
+                          ]),
+                      child: Center(child: Text('43'))),
+                ),
                 SizedBox(width: 15),
-                Container(
-                    height: 35,
-                    width: 35,
-                    decoration: BoxDecoration(
-                        color: Colors.white,
-                        shape: BoxShape.circle,
-                        boxShadow: [
-                          BoxShadow(
-                              color: Colors.grey,
-                              blurRadius: 1,
-                              spreadRadius: 1.5)
-                        ]),
-                    child: Center(child: Text('43'))),
+                GestureDetector(
+                  onTap: () {
+                    changesize(3);
+                  },
+                  child: Container(
+                      height: 35,
+                      width: 35,
+                      decoration: BoxDecoration(
+                          color: Colors.white,
+                          shape: BoxShape.circle,
+                          boxShadow: [
+                            BoxShadow(
+                                color: selectedsize == 3
+                                    ? Colors.red
+                                    : Colors.grey,
+                                blurRadius: 1,
+                                spreadRadius: 1.5)
+                          ]),
+                      child: Center(child: Text('44'))),
+                ),
                 SizedBox(width: 15),
-                Container(
-                    height: 35,
-                    width: 35,
-                    decoration: BoxDecoration(
-                        color: Colors.white,
-                        shape: BoxShape.circle,
-                        boxShadow: [
-                          BoxShadow(
-                              color: Colors.grey,
-                              blurRadius: 1,
-                              spreadRadius: 1.5)
-                        ]),
-                    child: Center(child: Text('44'))),
+                GestureDetector(
+                  onTap: () {
+                    changesize(4);
+                  },
+                  child: Container(
+                      height: 35,
+                      width: 35,
+                      decoration: BoxDecoration(
+                          color: Colors.white,
+                          shape: BoxShape.circle,
+                          boxShadow: [
+                            BoxShadow(
+                                color: selectedsize == 4
+                                    ? Colors.red
+                                    : Colors.grey,
+                                blurRadius: 1,
+                                spreadRadius: 1.5)
+                          ]),
+                      child: Center(child: Text('45'))),
+                ),
               ],
             ),
             SizedBox(height: 40),
