@@ -6,6 +6,10 @@ import 'package:testing1/task11.dart';
 import 'package:testing1/task12.dart';
 import 'package:testing1/task13.dart';
 import 'package:testing1/task15.dart';
+import 'package:testing1/task16.dart';
+import 'package:testing1/task17.dart';
+import 'package:testing1/task18.dart';
+import 'package:testing1/task19.dart';
 import 'package:testing1/task2.dart';
 import 'package:testing1/task3.dart';
 import 'package:testing1/task4.dart';
@@ -24,25 +28,29 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-        useMaterial3: true,
-      ),
-      home: Responsive(),
-      //Shopping()
-      //Task11()
-      //Gridview()
-      //Task11()
-      //Task10()
-      //VideoScreen()
-      //Task6()
-      //Task5()
-      //Task4()
-      //Task3(),
-      // const Screen2(),
-    );
+        debugShowCheckedModeBanner: false,
+        title: 'Flutter Demo',
+        theme: ThemeData(
+          colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+          useMaterial3: true,
+        ),
+        home: Task19()
+        //Task18()
+        //Task17(),
+        //Task16()
+        //Responsive(),
+        //Shopping()
+        //Task11()
+        //Gridview()
+        //Task11()
+        //Task10()
+        //VideoScreen()
+        //Task6()
+        //Task5()
+        //Task4()
+        //Task3(),
+        // const Screen2(),
+        );
   }
 }
 
