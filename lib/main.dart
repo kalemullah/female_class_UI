@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:testing1/major_task/bottom_nav_bar.dart';
+import 'package:testing1/major_task/splash_screen.dart';
 import 'package:testing1/task1.dart';
 import 'package:testing1/task10.dart';
 import 'package:testing1/task11.dart';
@@ -11,6 +14,8 @@ import 'package:testing1/task17.dart';
 import 'package:testing1/task18.dart';
 import 'package:testing1/task19.dart';
 import 'package:testing1/task2.dart';
+import 'package:testing1/task20.dart';
+import 'package:testing1/task21.dart';
 import 'package:testing1/task3.dart';
 import 'package:testing1/task4.dart';
 import 'package:testing1/task5.dart';
@@ -27,30 +32,22 @@ class MyApp extends StatelessWidget {
   const MyApp({super.key});
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-        debugShowCheckedModeBanner: false,
-        title: 'Flutter Demo',
-        theme: ThemeData(
-          colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-          useMaterial3: true,
-        ),
-        home: Task19()
-        //Task18()
-        //Task17(),
-        //Task16()
-        //Responsive(),
-        //Shopping()
-        //Task11()
-        //Gridview()
-        //Task11()
-        //Task10()
-        //VideoScreen()
-        //Task6()
-        //Task5()
-        //Task4()
-        //Task3(),
-        // const Screen2(),
-        );
+    return ScreenUtilInit(
+        designSize: const Size(360, 690),
+        minTextAdapt: true,
+        splitScreenMode: true,
+        builder: (_, child) {
+          return MaterialApp(
+            debugShowCheckedModeBanner: false,
+            title: 'First Method',
+            theme: ThemeData(
+              primarySwatch: Colors.blue,
+              textTheme: Typography.englishLike2018.apply(fontSizeFactor: 1.sp),
+            ),
+            home: child,
+          );
+        },
+        child: SplashScreen());
   }
 }
 

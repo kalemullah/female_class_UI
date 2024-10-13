@@ -24,30 +24,42 @@ class _Task16State extends State<Task16> {
                   color: Colors.red.withOpacity(.3),
                   child: Padding(
                     padding: const EdgeInsets.all(18.0),
-                    child: TextField(
-                      maxLines: 5,
-                      decoration: InputDecoration(
-                        
-                        // focusedBorder: sInputBorder.none,
-                        // focusedBorder:
-                        //  OutlineInputBorder(
-                        //     borderRadius: BorderRadius.circular(10),
-                        //     borderSide:
-                        //         BorderSide(color: Colors.black, width: 2)),
-                        border: InputBorder.none,
-                        suffix: Icon(Icons.password),
-
-                        label: Text('Email'),
-                        prefix: Icon(Icons.email),
-                        // hintText: 'Enter your email',
+                    child: TextFormField(
+                        decoration: InputDecoration(
+                      floatingLabelBehavior: FloatingLabelBehavior.always,
+                      labelText: 'Password',
+                      // prefixIcon: Icon(Icons.lock),
+                      suffix: Container(
+                        height: 20,
+                        width: 30,
+                        color: Colors.red,
                       ),
+                      focusedBorder: UnderlineInputBorder(),
+                    )),
+                    // TextField(
+                    //   maxLines: 5,
+                    //   decoration: InputDecoration(
+                    //     // enabledBorder: InputBorder.none,
+                    //     // focusedBorder: sInputBorder.none,
+                    //     // focusedBorder:
+                    //     //  OutlineInputBorder(
+                    //     //     borderRadius: BorderRadius.circular(10),
+                    //     //     borderSide:
+                    //     //         BorderSide(color: Colors.black, width: 2)),
+                    //     border: InputBorder.none,
+                    //     suffix: Icon(Icons.password),
 
-                      // maxLength: 25,
-                      // maxLines: 5,
-                      // obscureText: true,
-                      keyboardType: TextInputType.emailAddress,
-                      style: TextStyle(fontSize: 20, color: Colors.black),
-                    ),
+                    //     label: Text('Email'),
+                    //     prefix: Icon(Icons.email),
+                    //     // hintText: 'Enter your email',
+                    //   ),
+
+                    //   // maxLength: 25,
+                    //   // maxLines: 5,
+                    //   // obscureText: true,
+                    //   keyboardType: TextInputType.emailAddress,
+                    //   style: TextStyle(fontSize: 20, color: Colors.black),
+                    // ),
                   ),
                 ))),
             Container(
